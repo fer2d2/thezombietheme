@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }} {{ end }}">
+        <meta property="og:site_name" content="{{ .Site.Title }}"/>
+        <meta property="og:description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+        <meta property="og:url" content="{{ .Permalink }}" />
+        <meta property="og:locale" content="{{ .Site.LanguageCode }}">
+
+        <meta name="author" content="{{ .Site.Author.name }}">
+
+        <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+        <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
+
+        <link rel="stylesheet" href="{{ "/css/normalize.css" | absURL }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ "/css/monokai-sublime.css" | absURL }}">
+        <link rel="stylesheet" href="{{ "/css/base.css" | absURL }}">
+
+        {{ .Hugo.Generator }}
+
+        <title>
+            {{ if eq .URL "/" }}
+                {{ .Site.Title }}
+            {{ else }}
+                {{ .Title }} &middot; {{ .Site.Title }}
+            {{ end }}
+        </title>
+
+    </head>
+    <body>
+        <div class="container">
+            <header class="page-header">
+                <nav>
+                    <ul>{{ range .Site.Menus.main }}<li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>{{ end }}</ul>
+                </nav>
+
+                <h1 class="brand">{{ .Site.Title }}</h1>
+                <aside>
+                    <p>{{ .Site.Params.tagline | safeHTML }}</p>
+                    <p class="social-links">
+                        {{ with .Site.Params.twitter }}<a href="{{ . }}" target="_blank"><i class="fa fa-twitter"></i></a>{{ end }}
+                        {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank"><i class="fa fa-github"></i></a>{{ end }}
+                        {{ with .Site.Params.bitbucket }}<a href="{{ . }}" target="_blank"><i class="fa fa-bitbucket"></i></a>{{ end }}
+                    </p>
+                </aside>
+
+            </header>
