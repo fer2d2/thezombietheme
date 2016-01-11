@@ -1,0 +1,23 @@
+{
+  "name": "thezombietheme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fer2d2/thezombietheme.git"
+  },
+  "author": "@FeR2D2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fer2d2/thezombietheme/issues"
+  },
+  "homepage": "https://github.com/fer2d2/thezombietheme#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
