@@ -8,7 +8,7 @@
             Publicado el <strong>{{ .Date.Format "02/01/2006" }}</strong> por <strong>{{ .Params.author }}</strong> &middot; Tiempo de lectura estimado: <strong>{{ .ReadingTime }} min</strong>
         </p>
         <p class="article-summary">{{ .Summary }}</p>
-        {{ if .Truncated }}<a href="{{ .Permalink }}"><p class="article-read-more"><a href="{{ .Permalink }}">Seguir leyendo &rarr;</a></p>{{ end }}
+        {{ if .Truncated }}<p class="article-read-more"><a href="{{ .Permalink }}">Seguir leyendo</a></p>{{ end }}
     </article>
     {{ end }}
 

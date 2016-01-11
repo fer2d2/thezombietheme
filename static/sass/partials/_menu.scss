@@ -1,0 +1,22 @@
+/* Navigation */
+
+nav {
+  ul {
+    text-align: center;
+    padding: 0px;
+    margin-top: 0;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: $headerNavSize;
+      margin-top: $headerMargin;
+      padding-left: $headerNavSize;
+      padding-right: $headerNavSize;
+
+      a, a:hover, a:focus {
+        color: $primary-color-text;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+/* Header */
+
+header {
+  &.page-header {
+    background-image: url("/img/bg-header.png");
+    background-size: cover;
+    color: $primary-color-text;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  h1 {
+    &.heading-style {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &.brand {
+      @extend .heading-style;
+      font-family: $titleFont;
+      font-size: $headerTitleSize;
+      letter-spacing: $headerTitleLetterSpacing;
+
+      @media (max-width: $containerWidth) {
+        & {
+          font-size: $headerTitleSize * 0.75;
+        }
+      }
+    }
+
+    &.title {
+      @extend .heading-style;
+      font-family: $titleFont;
+      font-size: $headerTitleSize * 0.75;
+      letter-spacing: $headerTitleLetterSpacing * 2;
+    }
+  }
+
+  p {
+    font-size: $headerInfoSize;
+    text-align: center;
+    color: $primary-color-text;
+    margin-top: $headerInfoSize;
+
+    &.social-links {
+      margin: 0;
+      padding-top: $headerMargin / 2;
+      padding-bottom: $headerMargin;
+    }
+
+    a {
+      opacity: 0.8;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 1;  
+      }
+
+      &:hover, &:focus, &:visited {
+        color: $primary-color-text;
+      }
+
+      .fa {
+        font-size: $socialIconsSize;
+        padding-right: 1rem;
+        // margin-bottom: 1rem;
+      }
+    }
+
+  }
+}

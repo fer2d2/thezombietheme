@@ -1,0 +1,12 @@
+/* Footer */
+
+footer {
+  height: $footerHeight;
+
+  p {
+    font-size: $textSize;
+    padding-top: $footerHeight / 2 - $textSize / 2;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

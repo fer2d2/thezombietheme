@@ -1,0 +1,20 @@
+html {
+  font-size: $fontBaseLine;
+}
+
+body {
+  font-family: $textFont;
+  height: 100%;
+  margin: 0;
+}
+
+/* Container */
+
+.container {
+  min-height: calc(100vh - #{$footerHeight});
+  &:after {
+    content: "";
+    display: block;
+    height: $footerHeight;
+  }
+}

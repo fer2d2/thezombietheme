@@ -1,0 +1,39 @@
+/* Pagination */
+
+.pagination {
+  margin-top: 1em;
+
+  .post-button {
+    display: inline-block;
+    padding: .5em;
+    font-size: .8em;
+    color: #9EABB3;
+    border: #bfc8cd 1px solid;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+  }
+
+  .post-button-hover {
+    color: #889093;
+    border-color: #98a0a4;
+  }
+
+  .older-posts {
+    @extend .post-button;
+    float: right;
+
+    &:hover {
+      @extend .post-button-hover;
+    }
+  }
+
+  .newer-posts {
+    @extend .post-button;
+    float: left;
+
+    &:hover {
+      @extend .post-button-hover;
+    }
+  }
+}

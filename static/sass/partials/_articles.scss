@@ -1,0 +1,79 @@
+/* Articles */
+
+#article-listing, .article-content {
+  margin: $articleMargin auto;
+  max-width: $containerWidth;
+
+  @media (max-width: $containerWidth) {
+    & {
+      margin: $articleMargin / 2;
+    }
+  }
+}
+
+article {
+  font-size: $textSize;
+  padding-top: $titleSize / 2;
+  padding-bottom: $titleSize / 2;
+
+  border-bottom: $divider-color 1px solid;
+
+  .article-title {
+    font-size: $titleSize;
+    line-height: 3.8rem;
+
+    a {
+      color: $primary-text-color !important;
+      text-decoration: none;
+    }
+  }
+
+  .article-info {
+    color: $secondary-text-color;
+    font-size: $infoSize;
+    margin-top: -2rem;
+  }
+
+  .article-summary {
+    margin-top: $textSize;
+    font-size: $textSize;
+    color: $primary-text-color;
+    // text-align: justify;
+  }
+
+  .article-read-more {
+    text-align: right;
+    font-size: $textSize * 0.75;
+
+    a {
+      // @extend .card-1;
+      transition: all 0.2s ease-in-out;
+
+      border: 1px solid $button-color;
+      border-radius: 0.4rem;
+      color: $button-color;
+      font-weight: lighter;
+      padding: $textSize / 3;
+      margin: $textSize / 1.5;
+      text-decoration: none;
+
+      &:hover {
+        @extend .card-1-hover;
+        border-color: $primary-color-dark;
+        background-color: $primary-color-dark;
+        color: $primary-color-text;
+      }
+    }
+  }
+
+  .article-content {
+    font-size: $textSize;
+    font-family: $textFont;
+    line-height: $titleSize;
+    color: $primary-text-color;
+
+    & a {
+      color: $accent-color !important;
+    }
+  }
+}
