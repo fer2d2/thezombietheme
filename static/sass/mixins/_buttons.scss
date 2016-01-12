@@ -1,0 +1,21 @@
+@mixin main-button($button-color, $text-color, $button-color-hover, $text-color-hover) {
+  a {
+    font-size: $textSize * 0.75;
+    transition: $primaryTransition;
+
+    border: 1px solid $button-color;
+    border-radius: 0.4rem;
+    color: $button-color;
+    font-weight: lighter;
+    padding: $textSize / 3;
+    margin: $textSize / 1.5;
+    text-decoration: none;
+
+    &:hover {
+      @extend .card-1-hover;
+      border-color: $button-color-hover;
+      background-color: $button-color-hover;
+      color: $text-color-hover;
+    }
+  }
+}

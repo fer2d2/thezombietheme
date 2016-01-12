@@ -1,6 +1,13 @@
 /* Comments */
 
 #disqus_thread {
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin: $articleMargin auto;
   max-width: $containerWidth;
+
+  @media (max-width: $containerWidth) {
+    & {
+      margin: $articleMargin / 2;
+    }
+  }
 }

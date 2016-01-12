@@ -3,7 +3,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.2s ease-in-out; }
 
-.card-1-hover, article .article-read-more a:hover {
+.card-1-hover, article .article-read-more a:hover, .pagination a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 .card-2 {
@@ -137,9 +137,9 @@ article {
     font-size: 1.8rem;
     color: #212121; }
   article .article-read-more {
-    text-align: right;
-    font-size: 1.35rem; }
+    text-align: right; }
     article .article-read-more a {
+      font-size: 1.35rem;
       transition: all 0.2s ease-in-out;
       border: 1px solid #BDBDBD;
       border-radius: 0.4rem;
@@ -152,29 +152,34 @@ article {
         border-color: #0097A7;
         background-color: #0097A7;
         color: #FFFFFF; }
-  article .article-content {
+  article.article-content {
     font-size: 1.8rem;
     font-family: "Open Sans", Helvetica, sans-serif;
     line-height: 2.8rem;
     color: #212121; }
-    article .article-content a {
-      color: #795548 !important; }
+    article.article-content a {
+      color: #0097A7 !important;
+      transition: all 0.2s ease-in-out; }
+      article.article-content a:hover {
+        color: #00BCD4 !important; }
 
 /* Pagination */
 .pagination {
   margin-top: 1em; }
-  .pagination .post-button, .pagination .older-posts, .pagination .newer-posts {
-    display: inline-block;
-    padding: .5em;
-    font-size: .8em;
-    color: #9EABB3;
-    border: #bfc8cd 1px solid;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: border 0.3s ease; }
-  .pagination .post-button-hover, .pagination .older-posts:hover, .pagination .newer-posts:hover {
-    color: #889093;
-    border-color: #98a0a4; }
+  .pagination a {
+    font-size: 1.35rem;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #BDBDBD;
+    border-radius: 0.4rem;
+    color: #BDBDBD;
+    font-weight: lighter;
+    padding: 0.6rem;
+    margin: 1.2rem;
+    text-decoration: none; }
+    .pagination a:hover {
+      border-color: #0097A7;
+      background-color: #0097A7;
+      color: #FFFFFF; }
   .pagination .older-posts {
     float: right; }
   .pagination .newer-posts {
@@ -182,8 +187,11 @@ article {
 
 /* Comments */
 #disqus_thread {
-  margin: 0 auto;
+  margin: 4.8rem auto;
   max-width: 768px; }
+  @media (max-width: 768px) {
+    #disqus_thread {
+      margin: 2.4rem; } }
 
 /* Footer */
 footer {

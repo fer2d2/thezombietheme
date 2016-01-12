@@ -38,42 +38,26 @@ article {
     margin-top: $textSize;
     font-size: $textSize;
     color: $primary-text-color;
-    // text-align: justify;
   }
 
   .article-read-more {
     text-align: right;
-    font-size: $textSize * 0.75;
-
-    a {
-      // @extend .card-1;
-      transition: all 0.2s ease-in-out;
-
-      border: 1px solid $button-color;
-      border-radius: 0.4rem;
-      color: $button-color;
-      font-weight: lighter;
-      padding: $textSize / 3;
-      margin: $textSize / 1.5;
-      text-decoration: none;
-
-      &:hover {
-        @extend .card-1-hover;
-        border-color: $primary-color-dark;
-        background-color: $primary-color-dark;
-        color: $primary-color-text;
-      }
-    }
+    @include main-button($tertiary-text-color, $tertiary-text-color, $primary-color-dark, $primary-color-text);
   }
 
-  .article-content {
+  &.article-content {
     font-size: $textSize;
     font-family: $textFont;
     line-height: $titleSize;
     color: $primary-text-color;
 
-    & a {
-      color: $accent-color !important;
+    a {
+      color: $primary-color-dark !important;
+      transition: $primaryTransition;
+
+      &:hover {
+        color: $primary-color !important;
+      }
     }
   }
 }

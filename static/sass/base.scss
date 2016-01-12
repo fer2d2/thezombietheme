@@ -3,7 +3,9 @@
 @import "variables/_sizes";
 @import "variables/_colors";
 @import "variables/_values";
-@import "variables/_mixins";
+@import "mixins/_material_shadows";
+@import "mixins/_buttons";
+@import "mixins/_misc";
 @import "basics/_basics";
 @import "basics/_images";
 @import "partials/_header";
