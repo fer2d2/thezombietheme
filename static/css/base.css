@@ -79,13 +79,14 @@ header p {
   text-align: center;
   color: #FFFFFF;
   margin-top: 2.2rem; }
-  header p.social-links {
+  header p.contact-links {
     margin: 0;
     padding-top: 0.9rem;
     padding-bottom: 1.8rem; }
   header p a {
     opacity: 0.8;
-    transition: all 0.2s ease-in-out; }
+    transition: all 0.2s ease-in-out;
+    color: #FFFFFF; }
     header p a:hover {
       opacity: 1; }
     header p a:hover, header p a:focus, header p a:visited {

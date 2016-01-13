@@ -41,7 +41,7 @@
                 <h1 class="brand">{{ .Site.Title }}</h1>
                 <aside>
                     <p>{{ .Site.Params.tagline | safeHTML }}</p>
-                    <p class="social-links">
+                    <p class="contact-links">
                         {{ with .Site.Params.twitter }}<a href="{{ . }}" target="_blank"><i class="fa fa-twitter"></i></a>{{ end }}
                         {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank"><i class="fa fa-github"></i></a>{{ end }}
                         {{ with .Site.Params.bitbucket }}<a href="{{ . }}" target="_blank"><i class="fa fa-bitbucket"></i></a>{{ end }}

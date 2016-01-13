@@ -41,7 +41,7 @@ header {
     color: $primary-color-text;
     margin-top: $headerInfoSize;
 
-    &.social-links {
+    &.contact-links {
       margin: 0;
       padding-top: $headerMargin / 2;
       padding-bottom: $headerMargin;
@@ -50,9 +50,10 @@ header {
     a {
       opacity: 0.8;
       transition: all 0.2s ease-in-out;
+      color: $primary-color-text;
 
       &:hover {
-        opacity: 1;  
+        opacity: 1;
       }
 
       &:hover, &:focus, &:visited {
