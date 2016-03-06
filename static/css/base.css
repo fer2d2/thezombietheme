@@ -158,6 +158,8 @@ article {
     font-family: "Open Sans", Helvetica, sans-serif;
     line-height: 2.8rem;
     color: #212121; }
+    article.article-content h1 {
+      line-height: 4rem; }
     article.article-content a {
       color: #0097A7 !important;
       transition: all 0.2s ease-in-out; }

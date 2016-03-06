@@ -51,6 +51,10 @@ article {
     line-height: $titleSize;
     color: $primary-text-color;
 
+    h1 {
+      line-height: $titleSize + 1.2;
+    }
+
     a {
       color: $primary-color-dark !important;
       transition: $primaryTransition;
