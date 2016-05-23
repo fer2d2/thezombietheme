@@ -25,13 +25,18 @@ article {
     a {
       color: $primary-text-color !important;
       text-decoration: none;
+      transition: $primaryTransition;
+      
+      &:hover {
+        color: $primary-color-dark !important;
+      }
     }
   }
 
   .article-info {
     color: $secondary-text-color;
     font-size: $infoSize;
-    margin-top: -2rem;
+    margin-top: -1.2rem;
   }
 
   .article-summary {
