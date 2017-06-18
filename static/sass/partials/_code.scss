@@ -1,0 +1,84 @@
+/* macOS like `code` window */
+
+$window-radius: 6px;
+$close-btn-color: #ff6052;
+$minimize-btn-color: #ffbe06;
+$zoom-btn-color: #16cc37;
+$btn-size: 12px;
+$title-bar-heigh: 40px;
+$btn-margin: 10px;
+
+@mixin window-shadow-bottom {
+  box-shadow: 0px 8px 15px -8px rgba(0,0,0,0.75);
+}
+
+@mixin window-shadow-top {
+  box-shadow: 0px -3px 15px -8px rgba(0,0,0,0.75);
+}
+
+.window {
+  display: block;
+  position: relative;
+  border-radius: $window-radius;
+  @include window-shadow-bottom;
+}
+
+.mac {
+  .window-title-bar {
+    height: $title-bar-heigh;
+    background: linear-gradient(to bottom, #f0f0f0, #e9e9e9);
+    border-top-left-radius: $window-radius;
+    border-top-right-radius: $window-radius;
+    border-top: 1px solid #faf9ff;
+
+    @include window-shadow-top;
+  }
+
+  @mixin window-button {
+    height: $btn-size;
+    width: $btn-size;
+    border-radius: $window-radius;
+
+    position: absolute;
+    top: $title-bar-heigh/2 - $btn-size/2;
+  }
+
+  .close {
+    @include window-button;
+    background-color: $close-btn-color;
+    left: $btn-margin;
+  }
+
+  .minimize {
+    @include window-button;
+    background-color: $minimize-btn-color;
+    left: $btn-margin*2 + $btn-size;
+  }
+
+  .zoom {
+    @include window-button;
+    background-color: $zoom-btn-color;
+    left: $btn-margin*3 + $btn-size*2;
+  }
+}
+
+/* `pre` and `code` styles for inline and block codes */
+
+code {
+  border-radius: 0 0 .5rem .5rem;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 1rem!important;
+}
+
+pre {
+  margin: 0!important;
+}
+
+:not(pre) > code {
+  display: inline!important;
+  padding: .5rem!important;
+  background-color: $divider-color;
+  border-radius: .5rem;
+}

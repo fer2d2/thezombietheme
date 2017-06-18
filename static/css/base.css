@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans);
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 .card-1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.2s ease-in-out; }
@@ -168,6 +169,8 @@ article {
       transition: all 0.2s ease-in-out; }
       article.article-content a:hover {
         color: #00BCD4 !important; }
+  article ul {
+    word-wrap: break-word; }
 
 /* Pagination */
 .pagination {
@@ -201,9 +204,87 @@ article {
 
 /* Footer */
 footer {
-  height: 6.8rem; }
-  footer p {
-    font-size: 1.8rem;
-    padding-top: 2.5rem;
-    text-align: center;
-    margin: 0 auto; }
+  background-color: #042630;
+  padding: 2rem 1rem 1rem 2rem;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.4rem; }
+  footer a {
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    color: #FFFFFF;
+    text-decoration-line: none; }
+    footer a:hover {
+      opacity: 1; }
+    footer a:hover, footer a:focus, footer a:visited {
+      color: #FFFFFF; }
+
+/* macOS like `code` window */
+.window {
+  display: block;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0px 8px 15px -8px rgba(0, 0, 0, 0.75); }
+
+.mac .window-title-bar {
+  height: 40px;
+  background: linear-gradient(to bottom, #f0f0f0, #e9e9e9);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-top: 1px solid #faf9ff;
+  box-shadow: 0px -3px 15px -8px rgba(0, 0, 0, 0.75); }
+
+.mac .close {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  position: absolute;
+  top: 14px;
+  background-color: #ff6052;
+  left: 10px; }
+
+.mac .minimize {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  position: absolute;
+  top: 14px;
+  background-color: #ffbe06;
+  left: 32px; }
+
+.mac .zoom {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  position: absolute;
+  top: 14px;
+  background-color: #16cc37;
+  left: 54px; }
+
+/* `pre` and `code` styles for inline and block codes */
+code {
+  border-radius: 0 0 .5rem .5rem;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 1rem !important; }
+
+pre {
+  margin: 0 !important; }
+
+:not(pre) > code {
+  display: inline !important;
+  padding: 0.5rem !important;
+  background-color: #EEEEEE;
+  border-radius: .5rem; }
+
+#mc_embed_signup {
+  max-width: 768px !important;
+  margin: 0 auto; }
+
+.mc-field-group {
+  padding: 0 !important; }
+  .mc-field-group input {
+    color: black; }

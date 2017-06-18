@@ -1,12 +1,35 @@
 /* Footer */
 
 footer {
-  height: $footerHeight;
+  background-color: #042630;
+  padding: 2rem 1rem 1rem 2rem;
 
-  p {
-    font-size: $textSize;
-    padding-top: $footerHeight / 2 - $textSize / 2;
-    text-align: center;
-    margin: 0 auto;
+  font-size: $textSize;
+  color: $primary-color-text;
+  text-align: center;
+  margin: 0 auto;
+  font-size: $infoSize;
+
+  .license {
+
+  }
+
+  .author {
+
+  }
+
+  a {
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    color: $primary-color-text;
+    text-decoration-line: none;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover, &:focus, &:visited {
+      color: $primary-color-text;
+    }
   }
 }

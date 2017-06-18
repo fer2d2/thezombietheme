@@ -26,7 +26,7 @@ article {
       color: $primary-text-color !important;
       text-decoration: none;
       transition: $primaryTransition;
-      
+
       &:hover {
         color: $primary-color-dark !important;
       }
@@ -68,5 +68,9 @@ article {
         color: $primary-color !important;
       }
     }
+  }
+
+  ul {
+    word-wrap: break-word;
   }
 }
